@@ -1,0 +1,15 @@
+<div class="container text-align-center w-350">
+<div class="d-flex justify-content-space-between">
+<h2><%= @task.title%></h2>
+<p class="btn btn-dark w-10"><%= link_to "Edit this task", edit_path%></p>
+</div>
+<p class="card p-3"><%= @task.details%></p>
+<%if @task.completed == true%>
+  <%status = "This task is completed"%>
+<%else%>
+  <%status = "This task is still incomplete"%>
+<%end%>
+  <p><%=status%></p>
+
+<p><%= link_to "Back to list", root_path%></p>
+</div>
